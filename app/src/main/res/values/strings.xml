@@ -7,4 +7,6 @@
     <string name="other">Other</string>
     <string name="personal">Personal</string>
     <string name="add_a_task">Add a task</string>
+    <string name="write_task">Write here your task…</string>
+    <string name="add_task">Add task</string>
 </resources>

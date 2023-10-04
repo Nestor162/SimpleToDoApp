@@ -8,4 +8,6 @@
     <string name="other">Altro</string>
     <string name="personal">Personale</string>
     <string name="add_a_task">Aggiungi un\'attività</string>
+    <string name="write_task">Scrivi qui un\'attività</string>
+    <string name="add_task">Aggiungi attività</string>
 </resources>
