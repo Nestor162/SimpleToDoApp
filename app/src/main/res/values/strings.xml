@@ -2,4 +2,9 @@
     <string name="app_name">SimpleToDoApp</string>
     <string name="welcome_to_app">Welcome to SimpleToDoApp!</string>
     <string name="categories">Categories</string>
+    <string name="tasks">Tasks</string>
+    <string name="business">Business</string>
+    <string name="other">Other</string>
+    <string name="personal">Personal</string>
+    <string name="add_a_task">Add a task</string>
 </resources>

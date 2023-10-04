@@ -14,8 +14,16 @@ class ToDoActivity : AppCompatActivity() {
 
     )
 
+    private var tasks = mutableListOf(
+        Task("Business test", TaskCategory.Business),
+        Task("Personal test", TaskCategory.Personal),
+        Task("Other test", TaskCategory.Other)
+    )
+
     private lateinit var rvCategories: RecyclerView
     private lateinit var categoriesAdapter: CategoriesAdapter
+    private lateinit var rvTasks: RecyclerView
+    private lateinit var taskAdapter: TaskAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_to_do)
@@ -26,6 +34,7 @@ class ToDoActivity : AppCompatActivity() {
 
     private fun initComponent() {
         rvCategories = findViewById(R.id.rvCategories)
+        rvTasks = findViewById(R.id.rvTasks)
     }
 
     private fun initUI() {
@@ -33,5 +42,10 @@ class ToDoActivity : AppCompatActivity() {
         rvCategories.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         rvCategories.adapter = categoriesAdapter
+
+        taskAdapter = TaskAdapter(tasks)
+        rvTasks.layoutManager =
+            LinearLayoutManager(this)
+        rvTasks.adapter = taskAdapter
     }
 }

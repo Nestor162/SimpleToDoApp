@@ -3,4 +3,9 @@
     <string name="app_name">SimpleToDoApp</string>
     <string name="welcome_to_app">Bienvenido a SimpleToDoApp!</string>
     <string name="categories">Categorías</string>
+    <string name="tasks">Tareas</string>
+    <string name="business">Negocios</string>
+    <string name="other">Otro</string>
+    <string name="personal">Personal</string>
+    <string name="add_a_task">Añadir una tarea</string>
 </resources>
