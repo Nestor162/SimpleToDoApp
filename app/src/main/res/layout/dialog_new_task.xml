@@ -1,59 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="250dp"
     android:layout_height="wrap_content"
-    android:background="@color/background_app"
-    android:orientation="vertical"
-    android:padding="20dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true">
 
-    >
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etTask"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:hint="@string/write_task"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:background="@color/background_app"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <RadioGroup
-        android:id="@+id/rgCategories"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.AppCompatRadioButton
-            android:id="@+id/rbBusiness"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etTask"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/business_category"
-            android:checked="true"
-            android:text="@string/business"
-            android:textColor="@color/white" />
+            android:backgroundTint="@color/white"
+            android:hint="@string/write_task"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
 
-        <androidx.appcompat.widget.AppCompatRadioButton
-            android:id="@+id/rbPersonal"
+        <RadioGroup
+            android:id="@+id/rgCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbBusiness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/business_category"
+                android:checked="true"
+                android:text="@string/business"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbPersonal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/personal_category"
+                android:text="@string/personal"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/other_category"
+                android:text="@string/other"
+                android:textColor="@color/white" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnTaskAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/personal_category"
-            android:text="@string/personal"
+            android:backgroundTint="@color/accent"
+            android:text="@string/add_task"
             android:textColor="@color/white" />
 
-        <androidx.appcompat.widget.AppCompatRadioButton
-            android:id="@+id/rbOther"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/other_category"
-            android:text="@string/other"
-            android:textColor="@color/white" />
-    </RadioGroup>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnTaskAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/accent"
-        android:text="@string/add_task"
-        android:textColor="@color/white" />
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>
