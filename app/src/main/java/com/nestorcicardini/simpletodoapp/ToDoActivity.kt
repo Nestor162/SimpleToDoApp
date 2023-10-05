@@ -2,7 +2,11 @@ package com.nestorcicardini.simpletodoapp
 
 import android.app.Dialog
 import android.os.Bundle
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.AppCompatEditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -47,7 +51,7 @@ class ToDoActivity : AppCompatActivity() {
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         rvCategories.adapter = categoriesAdapter
 
-        taskAdapter = TaskAdapter(tasks)
+        taskAdapter = TaskAdapter(tasks) { position -> onItemSelected(position) }
         rvTasks.layoutManager =
             LinearLayoutManager(this)
         rvTasks.adapter = taskAdapter
@@ -63,6 +67,38 @@ class ToDoActivity : AppCompatActivity() {
         dialog.setContentView(R.layout.dialog_new_task)
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         dialog.show()
+
+        val btnAddTask: AppCompatButton = dialog.findViewById(R.id.btnAddTask)
+        val etTask: AppCompatEditText = dialog.findViewById(R.id.etTask)
+        val rgCategories: RadioGroup = dialog.findViewById(R.id.rgCategories)
+
+        btnAddTask.setOnClickListener {
+            val currentTask = etTask.text.toString()
+            if (currentTask.isNotEmpty()) {
+                val selectedId = rgCategories.checkedRadioButtonId
+                val selectedRadioButton: RadioButton = rgCategories.findViewById(selectedId)
+                val currentCategory: TaskCategory = when (selectedRadioButton.text) {
+                    getString(R.string.business) -> TaskCategory.Business
+                    getString(R.string.personal) -> TaskCategory.Personal
+                    else -> TaskCategory.Other
+                }
+
+                tasks.add(Task(currentTask, currentCategory))
+                updateTasks()
+                dialog.hide()
+            }
+
+        }
+
+    }
+
+    private fun onItemSelected(position: Int) {
+        tasks[position].isSelected = !tasks[position].isSelected
+        updateTasks()
+    }
+
+    private fun updateTasks() {
+        taskAdapter.notifyDataSetChanged()
     }
 
 }
