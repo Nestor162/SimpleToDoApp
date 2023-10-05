@@ -17,7 +17,8 @@ class CategoriesAdapter(private val categories: List<TaskCategory>) :
 
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
-        holder.render(categories[position])
+        val context = holder.itemView.context
+        holder.render(categories[position], context)
     }
 
 }
