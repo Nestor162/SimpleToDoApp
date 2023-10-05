@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class TaskAdapter(private val task: List<Task>, private val onTaskSelected: (Int) -> Unit) :
+class TaskAdapter(var task: List<Task>, private val onTaskSelected: (Int) -> Unit) :
     RecyclerView.Adapter<TaskViewHolder>() {
 
 

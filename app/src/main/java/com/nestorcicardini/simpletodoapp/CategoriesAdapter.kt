@@ -4,7 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class CategoriesAdapter(private val categories: List<TaskCategory>) :
+class CategoriesAdapter(
+    private val categories: List<TaskCategory>,
+    private val onCategorySelected: (Int) -> Unit
+) :
     RecyclerView.Adapter<CategoryViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
@@ -18,7 +21,7 @@ class CategoriesAdapter(private val categories: List<TaskCategory>) :
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val context = holder.itemView.context
-        holder.render(categories[position])
+        holder.render(categories[position], onCategorySelected)
     }
 
 }
