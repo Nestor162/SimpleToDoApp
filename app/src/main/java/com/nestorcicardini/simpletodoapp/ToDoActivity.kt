@@ -20,9 +20,9 @@ class ToDoActivity : AppCompatActivity() {
     )
 
     private var tasks = mutableListOf(
-        Task("Business test", TaskCategory.Business),
-        Task("Personal test", TaskCategory.Personal),
-        Task("Other test", TaskCategory.Other)
+        Task("Example business test", TaskCategory.Business),
+        Task("Example personal test", TaskCategory.Personal),
+        Task("Example other task", TaskCategory.Other)
     )
 
     private lateinit var rvCategories: RecyclerView
