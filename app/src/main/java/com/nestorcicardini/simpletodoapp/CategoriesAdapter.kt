@@ -20,7 +20,6 @@ class CategoriesAdapter(
 
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
-        val context = holder.itemView.context
         holder.render(categories[position], onCategorySelected)
     }
 
