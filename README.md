@@ -11,7 +11,6 @@ This project was created as an exercise to learn how to use RecyclerView and Lam
     <img src="https://github.com/Nestor162/SimpleToDoApp/assets/113930607/25ca2ad3-15ab-445b-b7dd-efcdd3062c66" width="320" />
     <img src="https://github.com/Nestor162/SimpleToDoApp/assets/113930607/69fcb15c-bbe6-4c29-baa9-b7b68903a874" width="320" />
     <img src="https://github.com/Nestor162/SimpleToDoApp/assets/113930607/1ab67f2d-fb92-4d44-a5f2-706d75c2ac10" width="320" />
-    <img src="https://github.com/Nestor162/SimpleToDoApp/assets/113930607/9488965e-8f10-4713-8bf8-b47ce86bb322" width="320" />
     <img src="https://github.com/Nestor162/SimpleToDoApp/assets/113930607/ea830e24-563e-447d-ad5b-0e14e6bf4bca" width="320" />
 </p>
 
