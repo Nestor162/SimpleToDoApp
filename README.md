@@ -1,4 +1,4 @@
-# SimpleToDoApp
+# <img src="https://github.com/Nestor162/SimpleToDoApp/assets/113930607/98f55080-5332-429e-95c3-468bc45e7a52" width="60" height="60"> SimpleToDoApp
 
 This is a simple Android application that allows you to add new tasks, categorize them, and filter them by category. The app has three categories: Personal, Business, and Other. You can mark tasks as complete or incomplete.
 
